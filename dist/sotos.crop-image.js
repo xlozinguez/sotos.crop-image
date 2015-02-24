@@ -32,20 +32,20 @@ angular.module('sotos.crop-image').directive('imageCrop', [ function() {
             $scope.cropOptions= $scope.cropOptions || {};
             $scope.cropOptions.viewSizeWidth=$scope.cropOptions.viewSizeWidth||480;
             $scope.cropOptions.viewSizeHeight=$scope.cropOptions.viewSizeHeight||360;
-            $scope.cropOptions.viewSizeFixed=$scope.cropOptions.viewSizeFixed||false;
+            $scope.cropOptions.viewSizeFixed = (typeof $scope.cropOptions.viewSizeFixed !== "undefined") ? $scope.cropOptions.viewSizeFixed : false;
             //no use radio btn create into canvas
             $scope.cropOptions.viewShowFixedBtn=false;
             //if rotate tool show
-            $scope.cropOptions.viewShowRotateBtn= $scope.cropOptions.viewShowRotateBtn||true;
+            $scope.cropOptions.viewShowRotateBtn = (typeof $scope.cropOptions.viewShowRotateBtn !== "undefined") ? $scope.cropOptions.viewShowRotateBtn : true;
             //output size of image
             $scope.cropOptions.outputImageWidth= $scope.cropOptions.outputImageWidth||0;
             $scope.cropOptions.outputImageHeight= $scope.cropOptions.outputImageHeight||0;
-            $scope.cropOptions.outputImageRatioFixed= $scope.cropOptions.outputImageRatioFixed||true;
+            $scope.cropOptions.outputImageRatioFixed = (typeof $scope.cropOptions.outputImageRatioFixed !== "undefined") ? $scope.cropOptions.outputImageRatioFixed : true;
             $scope.cropOptions.outputImageType= $scope.cropOptions.outputImageType||"jpeg";
             //if this check the image crop by the original size off image and no resize
-            $scope.cropOptions.outputImageSelfSizeCrop= $scope.cropOptions.outputImageSelfSizeCrop||true;
+            $scope.cropOptions.outputImageSelfSizeCrop = (typeof $scope.cropOptions.outputImageSelfSizeCrop !== "undefined") ? $scope.cropOptions.outputImageSelfSizeCrop : true;
             //show the crop tool use only for crop and crop again one image
-            $scope.cropOptions.viewShowCropTool= $scope.cropOptions.viewShowCropTool||true;
+            $scope.cropOptions.viewShowCropTool = (typeof $scope.cropOptions.viewShowCropTool !== "undefined") ? $scope.cropOptions.viewShowCropTool : true;
 
             //this is the watermark if is set the watermark tool
             //show after crop
@@ -61,7 +61,7 @@ angular.module('sotos.crop-image').directive('imageCrop', [ function() {
             $scope.cropOptions.watermarkTextStrokeLineWidth= $scope.cropOptions.watermarkTextStrokeLineWidth||1;
             $scope.cropOptions.watermarkTextFont= $scope.cropOptions.watermarkTextFont||'Arial';
 
-            $scope.cropOptions.inModal= $scope.cropOptions.inModal||false;
+            $scope.cropOptions.inModal = (typeof $scope.cropOptions.inModal !== "undefined") ? $scope.cropOptions.inModal : false;
             this.inModal =  $scope.cropOptions.inModal;
             
             //imageType = "image/jpeg";
